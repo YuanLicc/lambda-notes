@@ -1,9 +1,6 @@
 package com.yl.learn.fina;
 
-import com.sun.istack.internal.NotNull;
-
 import java.io.Serializable;
-import java.util.Objects;
 
 public class Person implements Serializable {
     private String name;
