@@ -13,11 +13,76 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <jdk.version>1.8</jdk.version>
         <junit.version>4.12</junit.version>
+        <site.version>3.7</site.version>
+        <compiler.version>3.7.0</compiler.version>
+        <javadoc.version>2.9.1</javadoc.version>
+        <checkstyle.version>3.0.0</checkstyle.version>
+        <jxr.version>2.5</jxr.version>
+        <pmd.version>3.8</pmd.version>
+        <changelog.version>2.3</changelog.version>
+        <cobertura.version>2.7</cobertura.version>
+        <argLine>-Dfile.encoding=UTF-8</argLine>
     </properties>
 
+    <developers>
+        <developer>
+            <name>YuanLi</name>
+            <id>YuanLi</id>
+            <email>yl123456789lxp@163.com</email>
+        </developer>
+    </developers>
+
+    <reporting>
+        <outputDirectory>${project.basedir}/target/report-doc</outputDirectory>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${javadoc.version}</version>
+
+                <configuration>
+                    <additionalparam>-Xdoclint:none</additionalparam>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jxr-plugin</artifactId>
+                <version>${jxr.version}</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-changelog-plugin</artifactId>
+                <version>${changelog.version}</version>
+            </plugin>
+
+        </plugins>
+    </reporting>
+
     <build>
-		<plugins>
-			<plugin>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${compiler.version}</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>${site.version}</version>
+                <configuration>
+                    <locales>zh_CN</locales>
+                </configuration>
+            </plugin>
+
+            <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>cobertura-maven-plugin</artifactId>
                 <version>2.7</version>
@@ -29,8 +94,22 @@
                     <check />
                 </configuration>
             </plugin>
-		</plugins>
-	</build>
+        </plugins>
+
+        <resources>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+
+        <testResources>
+            <testResource>
+                <directory>${project.basedir}/src/test/resources</directory>
+                <filtering>true</filtering>
+            </testResource>
+        </testResources>
+    </build>
 
     <dependencies>
         <dependency>
