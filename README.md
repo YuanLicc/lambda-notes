@@ -1,4 +1,4 @@
-## lambda [![Build Status](https://travis-ci.org/YuanLicc/lambda-notes.svg?branch=master)](https://travis-ci.org/YuanLicc/lambda)  [![codecov.io](https://codecov.io/gh/YuanLicc/lambda/branch/master/graphs/badge.svg?branch=master)](https://codecov.io/gh/YuanLicc/lambda?branch=master)
+## lambda [![Build Status](https://travis-ci.org/YuanLicc/lambda-notes.svg?branch=master)](https://travis-ci.org/YuanLicc/lambda-notes)  [![codecov.io](https://codecov.io/gh/YuanLicc/lambda-notes/branch/master/graphs/badge.svg?branch=master)](https://codecov.io/gh/YuanLicc/lambda-notes?branch=master)
 
 `Java 8` `Lambda`表达式学习笔记，摘自书籍[《Java 8 函数式编程》](https://www.amazon.cn/dp/B00VDSW7AE/ref=sr_1_1?s=books&ie=UTF8&qid=1528162560&sr=1-1&keywords=java+8%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B) ，笔记内只举了实例，没有进行过多的解释与剖析，可以通过`IDE`进入`Java 8` 的相关源码进行查看理解，查看主要知识储备包括：
 
