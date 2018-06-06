@@ -9,8 +9,8 @@ public class FunRefTest extends TestCase {
     public void testFunRef() {
         String namePrefix = PersonOperator.getNameAndPrefix(Person::new);
 
-        Supplier<Person> personSupplier = () -> new Person();
-
         Supplier<Person> personSupplier1 = () -> new Person("ccc");
+        String aa = PersonOperator.getNameAndPrefix(personSupplier1);
+        System.out.println(namePrefix + aa);
     }
 }

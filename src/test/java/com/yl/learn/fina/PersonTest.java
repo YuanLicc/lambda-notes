@@ -6,6 +6,7 @@ public class PersonTest extends TestCase {
     public void testFinalPerson() {
         final Person person = new Person();
         person.setName("dd");
-        System.out.println(person.getName());
+        Person person1 = new Person("ccc");
+        System.out.println(person.getName() + " " + person1.getName());
     }
 }
